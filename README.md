@@ -1,4 +1,4 @@
-# Street Hearts — website
+# Street Hearts website
 
 Statische website voor Street Hearts (`street-hearts.nl`), gehost via **GitHub Pages** met **Cloudflare** ervoor voor DNS, CDN en SSL.
 
@@ -22,13 +22,13 @@ assets/
 
 ## Tekst aanpassen
 
-Alle tekst staat in `index.html`. Open dat bestand in een editor (Notepad, VS Code, ...), zoek de zin die je wil aanpassen en wijzig die direct. Opslaan en pushen naar GitHub — binnen 1–2 minuten staat het online.
+Alle tekst staat in `index.html`. Open dat bestand in een editor (Notepad, VS Code, ...), zoek de zin die je wil aanpassen en wijzig die direct. Opslaan en pushen naar GitHub, binnen 1-2 minuten staat het online.
 
 De 6 profielen staan onderaan `index.html` in een `<script type="application/json" id="profile-data">` blok. Pas daar de teksten aan als je een profiel wil wijzigen.
 
 ## Lokaal bekijken
 
-Dubbelklik op `index.html` — opent in je browser. Voor een telefoon-test op je eigen wifi-netwerk kun je een mini-webserver starten:
+Dubbelklik op `index.html` om hem in je browser te openen. Voor een telefoon-test op je eigen wifi-netwerk kun je een mini-webserver starten:
 
 ```powershell
 # Python (meestal al geïnstalleerd op Windows 11)
@@ -61,11 +61,11 @@ In de repository op GitHub:
 3. **Branch**: `main` / `(root)` → **Save**
 4. Wacht 1 minuut. Bovenaan verschijnt: *"Your site is live at https://<username>.github.io/street-hearts-website/"*
 5. Bij **Custom domain**: vul `street-hearts.nl` in en klik Save (het CNAME-bestand staat er al, dus dit slaat correct op).
-6. Vink **Enforce HTTPS** aan (zodra DNS gepropageerd is — kan tot 24 uur duren).
+6. Vink **Enforce HTTPS** aan (zodra DNS gepropageerd is, kan tot 24 uur duren).
 
 ### 3. DNS in Cloudflare
 
-In Cloudflare bij de DNS-instellingen van `street-hearts.nl` — voeg deze records toe:
+In Cloudflare bij de DNS-instellingen van `street-hearts.nl`, voeg deze records toe:
 
 | Type  | Name | Content                              | Proxy |
 |-------|------|--------------------------------------|-------|
@@ -77,7 +77,7 @@ In Cloudflare bij de DNS-instellingen van `street-hearts.nl` — voeg deze recor
 
 *Belangrijk*: zet de proxy-status (oranje wolkje) **eerst op "DNS only"** (grijs wolkje) tijdens de eerste setup. GitHub Pages moet eerst zelf een SSL-certificaat kunnen aanvragen via Let's Encrypt. Zodra "Enforce HTTPS" in GitHub Pages werkt (groen vinkje), kun je het oranje wolkje aanzetten voor Cloudflare's CDN.
 
-In **Cloudflare → SSL/TLS** → zet op **"Full"** (niet "Flexible" — dat veroorzaakt redirect-loops met GitHub Pages).
+In **Cloudflare → SSL/TLS** → zet op **"Full"** (niet "Flexible", dat veroorzaakt redirect-loops met GitHub Pages).
 
 ### 4. Klaar
 
